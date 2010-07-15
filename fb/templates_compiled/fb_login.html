@@ -1,0 +1,32 @@
+from __future__ import division
+from jinja2.runtime import LoopContext, TemplateReference, Macro, Markup, TemplateRuntimeError, missing, concat, escape, markup_join, unicode_join, to_string, TemplateNotFound
+name = '/fb_login.html'
+
+def root(context, environment=environment):
+    parent_template = None
+    if 0: yield None
+    parent_template = environment.get_template('base.html', '/fb_login.html')
+    for name, parent_block in parent_template.blocks.iteritems():
+        context.blocks.setdefault(name, []).append(parent_block)
+    for event in parent_template.root_render_func(context):
+        yield event
+
+def block_content(context, environment=environment):
+    l_url_for = context.resolve('url_for')
+    l__ = context.resolve('_')
+    if 0: yield None
+    yield u'\n\t<div id="loginform">\n\t\t<div class="entry">\n\t\t\t<div class="entry_content">\n\t\t\t\t<p>\n\t\t\t\t\tTime to get logged in! We need to know who you are to accept your project submission!\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tYour supporters who will vote for you with their wallets and pledge their donations would love to find out more about you too.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tJust hit the facebook login button on the right if you have a facebook account and you are golden.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tWelcome to the Open Web. Welcome to the new age of empowerment for enterprising, creative youth like you!\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n    </div>\n    <!--<a href="%s">%s</a>-->\n' % (
+        escape(context.call(l_url_for, 'auth/request_reset_password')), 
+        escape(context.call(l__, 'Forgot password?')), 
+    )
+
+def block_bodytag(context, environment=environment):
+    if 0: yield None
+    yield u'<body onload="document.forms[0].user_name.focus();">'
+
+def block_page_title(context, environment=environment):
+    if 0: yield None
+    yield u'Login'
+
+blocks = {'content': block_content, 'bodytag': block_bodytag, 'page_title': block_page_title}
+debug_info = '1=8&6=14&25=19&5=23&3=27'

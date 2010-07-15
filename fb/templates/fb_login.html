@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Login{% endblock %}
+
+{%- block bodytag %}<body onload="document.forms[0].user_name.focus();">{% endblock bodytag -%}
+{% block content %}
+	<div id="loginform">
+		<div class="entry">
+			<div class="entry_content">
+				<p>
+					Time to get logged in! We need to know who you are to accept your project submission!
+				</p>
+				<p>
+					Your supporters who will vote for you with their wallets and pledge their donations would love to find out more about you too.
+				</p>
+				<p>
+					Just hit the facebook login button on the right if you have a facebook account and you are golden.
+				</p>
+				<p>
+					Welcome to the Open Web. Welcome to the new age of empowerment for enterprising, creative youth like you!
+				</p>
+			</div>
+		</div>
+    </div>
+    <!--<a href="{{ url_for('auth/request_reset_password') }}">{{_('Forgot password?')}}</a>-->
+{% endblock content %}

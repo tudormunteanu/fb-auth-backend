@@ -1,0 +1,15 @@
+from __future__ import division
+from jinja2.runtime import LoopContext, TemplateReference, Macro, Markup, TemplateRuntimeError, missing, concat, escape, markup_join, unicode_join, to_string, TemplateNotFound
+name = '/index.html'
+
+def root(context, environment=environment):
+    l_post_url = context.resolve('post_url')
+    l_access_token = context.resolve('access_token')
+    if 0: yield None
+    yield u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n<title>Top Page - fb</title>\n</head>\n<body>\n\t<!--<form enctype="multipart/form-data" action="%s" method="POST">-->\n\t<form enctype="multipart/form-data" action="/facebook/test_graph_api/" method="POST">\n\t\t<input type="hidden" name="MAX_FILE_SIZE" value="100000" />\n\t\t<input type="hidden" name="access_token" value="%s" />\n\t\tChoose a file to upload: <input name="file" type="file" /><br />\n\t\t<input type="submit" value="Upload File" />\n\t</form>\n\t\n</body>\n</html>' % (
+        escape(l_post_url), 
+        escape(l_access_token), 
+    )
+
+blocks = {}
+debug_info = '1=9&8=10&11=11'
