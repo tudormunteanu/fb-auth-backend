@@ -1,0 +1,11 @@
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.*~
+*.bak
+local_settings.py
+*.kpf
+.flashProjectProperties
+.DS_Store
+templates_compiled/*
